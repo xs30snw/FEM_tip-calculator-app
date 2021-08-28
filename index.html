@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap"> 
+  <link rel="stylesheet" href="style.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+
+  <header>
+    <img src="images/logo.svg" alt="">
+  </header>
+
+  <form>
+
+    <section class="inputs">
+        <fieldset>
+          <legend>Bill</legend>
+          <div class="input_w_icon txt">
+            <div>
+              <img src="images/icon-dollar.svg" alt="">
+            </div>
+            <div>
+              <input type="text" inputmode="numeric" id="bill" placeholder="0">
+            </div>
+          </div>
+        </fieldset>
+        <fieldset id="tip_choose">
+          <legend>Select Tip %</legend>
+          <div class="container">
+            <input id="tip-5" type="radio" name="tip-radio" value="5"><label for="tip-5">5%</label>
+            <!-- <button type="button">5%</button> -->
+          </div>
+          <div class="container">
+            <input id="tip-10" type="radio" name="tip-radio" value="10"><label for="tip-10">10%</label>
+            <!-- <button type="button">10%</button> -->
+          </div>
+          <div class="container">
+            <input id="tip-15" type="radio" name="tip-radio" value="15"><label for="tip-15">15%</label>
+           <!-- <button type="button">15%</button> -->
+          </div>
+          <div class="container">
+            <input id="tip-25" type="radio" name="tip-radio" value="25"><label for="tip-25">25%</label>
+            <!-- <button type="button">25%</button> -->
+          </div>
+          <div class="container">
+            <input id="tip-50" type="radio" name="tip-radio" value="50"><label for="tip-50">50%</label>
+            <!-- <button type="button">50%</button> -->
+          </div>
+          <div class="container txt">
+            <input type="text" inputmode="numeric" id="custom" placeholder="Custom">
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Number of People</legend>
+          <p id="erMsg">Can't be zero</p>
+          <div class="input_w_icon txt">
+            <div>
+              <img src="images/icon-person.svg" alt="">
+            </div>
+            <div>
+              <input type="text" inputmode="numeric" id="people" placeholder="0">
+            </div>
+          </div>
+        </fieldset>
+    </section>
+
+    <section class="outputs">
+      <div id="result">
+        <div>
+          <p>
+            Tip Amount<br>
+            <span>/ person</span>
+          </p>
+        </div>
+        <div>
+          <p id="output1">$4.27</p>
+        </div>
+        <div>
+          <p>
+            Total<br>
+            <span>/ person</span>
+          </p>
+        </div>
+        <div>
+          <p id="output2">$32.79</p>
+        </div>
+      </div>
+      <button id="reset" type="reset" onclick="resetValues()">RESET</button>
+    </section>
+
+  </form>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">xs30snw</a>.
+  </div>
+
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
